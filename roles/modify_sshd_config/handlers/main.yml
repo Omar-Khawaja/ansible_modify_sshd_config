@@ -1,0 +1,5 @@
+---
+# handlers file for modify_sshd_config/roles/modify_sshd_config
+
+- name: restart sshd
+  service: name=sshd state=restarted

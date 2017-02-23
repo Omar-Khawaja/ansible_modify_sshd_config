@@ -1,0 +1,10 @@
+---
+
+- name: modify AllowUsers in sshd_config
+# You can change the hosts below to 'all' or another group as specified in your
+# /etc/ansible/hosts file
+  hosts: nodes
+  remote_user: root
+
+  roles:
+    - modify_sshd_config

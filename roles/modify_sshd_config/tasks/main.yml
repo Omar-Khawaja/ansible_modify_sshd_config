@@ -1,0 +1,7 @@
+---
+# tasks file for modify_sshd_config/roles/modify_sshd_config
+
+- name: modify AllowedUsers in sshd_config
+  template: src=sshd_config dest=/etc/ssh/sshd_config
+  notify:
+  - restart sshd
