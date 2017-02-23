@@ -46,7 +46,10 @@ SyslogFacility AUTHPRIV
 # Authentication:
 
 # List the users you want to grant SSH access to in the line below
-AllowUsers 
+AllowUsers root
+{% for i in users %}
+{{ i }}
+{% endfor %} 
 #LoginGraceTime 2m
 #PermitRootLogin yes
 #StrictModes yes

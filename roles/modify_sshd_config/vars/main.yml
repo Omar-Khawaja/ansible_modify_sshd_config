@@ -1,2 +1,9 @@
 ---
 # vars file for modify_sshd_config/roles/modify_sshd_config
+
+# Add users to whom you want to grant SSH access to the users list
+# Be sure to add 'AllowUsers' before the username.
+
+users:
+  - AllowUsers exampleuser1
+  - AllowUsers exampleuser2
