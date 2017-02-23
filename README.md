@@ -1,5 +1,4 @@
-This playbook replaces the /etc/ssh/sshd_config file on any node it is run
-against and then restarts the ssh service so the changes can take effect.
-
-If you are trying to modify ssh access for users, change the AllowUsers line
-in the sshd_config template.
+This playbook uses the users listed in the vars directory of the
+modify_sshd_config role to generate the **AllowUsers** portion of the
+sshd_config template. This will ensure that only those users (besides root)
+will have SSH access to the nodes that this playbook is run against.
